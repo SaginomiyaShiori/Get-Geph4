@@ -2,7 +2,8 @@
 rustup default nightly
 cargo install cross
 export PATH=~/.cargo/bin:$PATH
-git clone https://github.com/geph-official/geph4
+version=`cat geph4Version`
+git clone --depth 1 --branch "$version" https://github.com/geph-official/geph4
 cd geph4
 
 sh osx_build.sh
